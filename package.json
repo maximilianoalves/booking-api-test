@@ -1,0 +1,26 @@
+{
+  "name": "booking-api-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cypress:run": "./node_modules/.bin/cypress run",
+    "cypress:run-contracts": "./node_modules/.bin/cypress run --env grep=@contracts",
+    "cypress:run-acceptance": "./node_modules/.bin/cypress run --env grep=@acceptance",
+    "cypress:report": "npx mochawesome-merge ./mochawesome-report/json/mochawesome*.json > mochawesome-report/report.json && npx marge mochawesome-report/report.json --autoOpen --showPending=false",
+    "cypress:clean-report": "rm -rf mochawesome-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@hapi/joi": "^17.1.1",
+    "cypress": "^4.4.0",
+    "cypress-select-tests": "^1.5.4",
+    "mocha": "^7.1.1",
+    "mochawesome": "^6.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
